@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1 class="heading"> Climate Data of the current day</h1>
+
+{% if data %}
+    <ul>
+        <li>Date: {{ data[0].date }}</li>
+        <li>Mean Temperature: {{ data[0].meantemp }}</li>
+        <li>Humidity: {{ data[0].humidity }}</li>
+        <li>Wind Speed: {{ data[0].wind_speed }}</li>
+        <li>Mean Pressure: {{ data[0].meanpressure }}</li>
+    </ul>
+{% else %}
+    <p>No data to display</p>
+{% endif %}
+
+
+<a href="/">Go back</a>
+</body>
+</html>

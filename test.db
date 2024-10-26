@@ -1,0 +1,22 @@
+import sqlite3
+
+# Connect to the SQLite database
+conn = sqlite3.connect('test.db')
+
+# Create a cursor object to execute SQL commands
+cursor = conn.cursor()
+
+# Query to select all records from the members table
+cursor.execute("SELECT * FROM members")
+
+# Fetch all rows from the executed query
+rows = cursor.fetchall()
+
+# Print the records in the members table
+print("members table:")
+for row in rows:
+    print(row)
+
+# Close the cursor and connection
+cursor.close()
+conn.close()

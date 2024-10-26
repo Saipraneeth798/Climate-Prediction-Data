@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Climate Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+<h1 class="heading">Climate Prediction Of The Year 2017</h1>
+
+<form id="myForm" method="post" action="/submitform" enctype="multipart/form-data">
+    <!-- Input for file upload -->
+    <input type="file" name="assignment_file" required>
+
+    <!-- Custom date input in MM/DD/YYYY format -->
+    <label for="dateInput">Date (MM/DD/YYYY):</label>
+    <input type="text" id="dateInput" name="date" placeholder="MM/DD/YYYY" required>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+</form>
+
+
+<!-- Add a div to display the result -->
+<div id="result"></div>
+
+<script src="/static/index.js"></script>
+</body>
+</html>
